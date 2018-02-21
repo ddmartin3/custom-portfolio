@@ -1,3 +1,29 @@
+$(document).ready(function(){
+  var header = $('#main-header');
+  
+  var backgrounds = new Array(
+      'url(./img/durangotosilverton.jpg)'
+    , 'url(./img/teslajuice.jpg)'
+    , 'url(./img/vfr-drone1.jpg)'
+    , 'url(./img/moab-approach.jpg)'
+    , 'url(./img/snowzero.jpg)'
+    , 'url(./img/helmets.jpg)'
+    , 'url(./img/fireyfurnace.jpg)'
+    , 'url(./img/vfr-drone-badlands.jpg)'
+  );
+  
+  var current = 0;
+  
+  function nextBackground() {
+      current++;
+      current = current % backgrounds.length;
+      header.css('background-image', backgrounds[current]);
+  }
+  setInterval(nextBackground, 10*1000);
+  
+  header.css('background-image', backgrounds[0]);
+});
+
 (function($) {
   "use strict"; // Start of use strict
 
