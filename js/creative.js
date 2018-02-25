@@ -2,14 +2,17 @@ $(document).ready(function(){
   var header = $('#main-header');
   
   var backgrounds = new Array(
-      'url(./img/durangotosilverton.jpg)'
+      'url(./img/tucson-mtn-park.jpg)'
+    , 'url(./img/durangotosilverton.jpg)'
     , 'url(./img/teslajuice.jpg)'
-    , 'url(./img/vfr-drone1.jpg)'
+    , 'url(./img/tucson-mtn-park.jpg)'
     , 'url(./img/moab-approach.jpg)'
     , 'url(./img/snowzero.jpg)'
+    , 'url(./img/tucson-mtn-park.jpg)'
     , 'url(./img/helmets.jpg)'
     , 'url(./img/fireyfurnace.jpg)'
     , 'url(./img/vfr-drone-badlands.jpg)'
+    , 'url(./img/tucson-mtn-park.jpg)'
   );
   
   var current = 0;
@@ -19,7 +22,7 @@ $(document).ready(function(){
       current = current % backgrounds.length;
       header.css('background-image', backgrounds[current]);
   }
-  setInterval(nextBackground, 10*1000);
+  setInterval(nextBackground, 15*1000);
   
   header.css('background-image', backgrounds[0]);
 });
@@ -81,21 +84,5 @@ $(document).ready(function(){
     scale: 0.3,
     distance: '0px'
   }, 300);
-
-  // Magnific popup calls
-  $('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1]
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-    }
-  });
 
 })(jQuery); // End of use strict

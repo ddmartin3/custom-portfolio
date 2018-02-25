@@ -19,13 +19,17 @@ hr.light {
 }
 
 a {
-  color: #F05F40;
+  color: rgb(114, 114, 114);
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-a:hover {
+p a:hover{
+  color: aliceblue;
+}
+
+#contact a:hover {
   color: #f05f40;
 }
 
@@ -165,6 +169,12 @@ img::-moz-selection {
     color: #F05F40;
   }
 }
+ 
+ #main-header p{
+  background: #252423;
+  opacity: .63;
+   color: #fff;
+ }
 
  header.masthead {
   padding-top: 10rem;
@@ -229,7 +239,7 @@ header.masthead p {
   position: absolute;
   bottom: 0;
   display: block;
-  width: 100%;
+  width: 95%;
   height: 100%;
   text-align: center;
   opacity: 0;
@@ -268,9 +278,17 @@ header.masthead p {
   opacity: 1;
 }
 
+.portfolio-box img{
+  height: 250px;
+  width: 95%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .portfolio-box:focus {
   outline: none;
 }
+
 
 @media (min-width: 768px) {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
